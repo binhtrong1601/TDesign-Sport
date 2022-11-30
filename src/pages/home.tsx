@@ -5,7 +5,7 @@ const HomePage = () => {
     <div className="App">
       <p>Home page</p>
       <AppButton />
-      <AppSelect />
+      <AppSelect listOptions={[1, 2, 3, 4]} />
     </div>
   );
 };
