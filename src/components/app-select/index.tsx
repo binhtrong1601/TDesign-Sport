@@ -2,12 +2,16 @@ import { Select, SelectProps } from 'antd';
 
 const { Option } = Select;
 
-const AppSelect = ({ ...props }: SelectProps) => {
+interface AppSelectProps extends SelectProps {
+  listOptions?: (string | number)[];
+}
+
+const AppSelect = ({ listOptions, ...props }: AppSelectProps) => {
   return (
     <Select {...props}>
-      <Option>1</Option>
-      <Option>2</Option>
-      <Option>3</Option>
+      {listOptions?.map((option) => (
+        <Option key={option}>{option}</Option>
+      ))}
     </Select>
   );
 };
