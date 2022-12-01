@@ -1,4 +1,4 @@
-import { AppButton, AppSelect } from '../components';
+import { AppButton, AppSelect, AppCategory, AppPreviewColor } from '../components';
 
 const HomePage = () => {
   return (
@@ -6,6 +6,9 @@ const HomePage = () => {
       <p>Home page</p>
       <AppButton />
       <AppSelect />
+      <AppCategory value={2} />
+      <AppCategory value={3} />
+      <AppPreviewColor />
     </div>
   );
 };
